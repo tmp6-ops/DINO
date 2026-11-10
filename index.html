@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome Dino Game Clone</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="game-container">
+    <div class="header">
+      <div class="sound-toggle" id="soundToggle" title="Toggle Sound">🔊 SOUND: ON</div>
+      <div class="scoreboard">
+        <span class="hi-score" id="hiScore">HI 00000</span>
+        <span class="current-score" id="score">00000</span>
+      </div>
+    </div>
+
+    <canvas id="gameCanvas" width="800" height="250"></canvas>
+
+    <div class="game-overlay" id="startScreen">
+      <div class="overlay-card">
+        <h1>T-REX RUNNER</h1>
+        <p>Press <span class="kbd">SPACE</span> or <span class="kbd">&uparrow;</span> to Jump</p>
+        <p>Press <span class="kbd">&downarrow;</span> to Duck</p>
+        <button id="startBtn" class="btn">START GAME</button>
+      </div>
+    </div>
+
+    <div class="game-overlay hidden" id="gameOverScreen">
+      <div class="overlay-card">
+        <h2>GAME OVER</h2>
+        <p class="final-score" id="finalScoreText">SCORE: 00000</p>
+        <button id="restartBtn" class="btn">PLAY AGAIN</button>
+      </div>
+    </div>
+
+    <div class="instructions">
+      Controls: <span class="kbd">Space</span> / <span class="kbd">&uparrow;</span> Jump &bull; 
+      <span class="kbd">&downarrow;</span> Duck &bull; 
+      <span class="kbd">M</span> Mute &bull; Tap / Click canvas on mobile
+    </div>
+  </div>
+
+  <script src="audio.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
+
